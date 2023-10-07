@@ -37,3 +37,14 @@ require_relative './helper_class'
 ```
 
 You do not need to change any of the require statements inside your `spec` directory.
+
+#Retro Summary after iteration 2
+#3 things that went well:
+  #everything works
+  #used reduce in various ways -- my new favorite method
+  #did a lot of work -- one person completing a group project
+
+#3 things that would do differently
+  # instead of copy/pasting so much code I would want to create different methods for things like "game_teams_that_match_season"
+  # use mocks and stubs more efficiently
+  # use smaller data sets for testing more efficiently
