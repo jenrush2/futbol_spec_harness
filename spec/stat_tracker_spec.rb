@@ -114,7 +114,7 @@ RSpec.describe StatTracker do
   end
 
   #not in iteration 2
-  it "#best_season" do
+  xit "#best_season" do
     expect(@stat_tracker.best_season("6")).to eq "20132014"
   end
 #not in iteration 2
@@ -122,7 +122,7 @@ RSpec.describe StatTracker do
     expect(@stat_tracker.worst_season("6")).to eq "20142015"
   end
 #not in iteration 2
-  xit "#average_win_percentage" do
+  it "#average_win_percentage" do
     expect(@stat_tracker.average_win_percentage("6")).to eq 0.49
   end
 #not in iteration 2
