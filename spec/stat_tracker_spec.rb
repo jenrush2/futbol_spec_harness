@@ -113,24 +113,23 @@ RSpec.describe StatTracker do
     expect(@stat_tracker.game_team_season(@stat_tracker.game_teams[0])).to eq "20122013"
   end
 
-  #not in iteration 2
   xit "#best_season" do
     expect(@stat_tracker.best_season("6")).to eq "20132014"
   end
-#not in iteration 2
+
   xit "#worst_season" do
     expect(@stat_tracker.worst_season("6")).to eq "20142015"
   end
-#not in iteration 2
+
   xit "#average_win_percentage" do
     expect(@stat_tracker.average_win_percentage("6")).to eq 0.49
   end
 #not in iteration 2
-  it "#most_goals_scored" do
+  xit "#most_goals_scored" do
     expect(@stat_tracker.most_goals_scored("18")).to eq 7
   end
 #not in iteration 2
-  xit "#fewest_goals_scored" do
+  it "#fewest_goals_scored" do
     expect(@stat_tracker.fewest_goals_scored("18")).to eq 0
   end
 #not in iteration 2
