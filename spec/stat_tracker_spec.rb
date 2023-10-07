@@ -108,8 +108,13 @@ RSpec.describe StatTracker do
 
     expect(@stat_tracker.team_info("18")).to eq expected
   end
-#not in iteration 2
-  xit "#best_season" do
+#test created by me
+  xit "game_team_season" do
+    expect(@stat_tracker.game_team_season(@stat_tracker.game_teams[0])).to eq "20122013"
+  end
+
+  #not in iteration 2
+  it "#best_season" do
     expect(@stat_tracker.best_season("6")).to eq "20132014"
   end
 #not in iteration 2
