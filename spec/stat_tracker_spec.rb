@@ -124,19 +124,19 @@ RSpec.describe StatTracker do
   xit "#average_win_percentage" do
     expect(@stat_tracker.average_win_percentage("6")).to eq 0.49
   end
-#not in iteration 2
+
   xit "#most_goals_scored" do
     expect(@stat_tracker.most_goals_scored("18")).to eq 7
   end
-#not in iteration 2
+
   xit "#fewest_goals_scored" do
     expect(@stat_tracker.fewest_goals_scored("18")).to eq 0
   end
-#not in iteration 2
+
   xit "#favorite_opponent" do
     expect(@stat_tracker.favorite_opponent("18")).to eq "DC United"
   end
-#not in iteration 2
+
   it "#rival" do
     expect(@stat_tracker.rival("18")).to eq("Houston Dash").or(eq("LA Galaxy"))
   end
@@ -170,4 +170,13 @@ RSpec.describe StatTracker do
     expect(@stat_tracker.fewest_tackles("20132014")).to eq "Atlanta United"
     expect(@stat_tracker.fewest_tackles("20142015")).to eq "Orlando City SC"
   end
+
+  #test written by me
+  xit "biggest_team_blowout" do
+    expect(@stat_tracker.biggest_team_blowout("6")).to eq(4)
+  end
+
+  #test written by me
+  it 
+
 end
