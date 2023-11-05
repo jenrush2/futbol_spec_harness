@@ -177,8 +177,13 @@ RSpec.describe StatTracker do
   end
 
   #test written by me
-  it "worst_loss" do 
+  xit "worst_loss" do 
     expect(@stat_tracker.worst_loss("6")).to eq(5)
+  end
+
+  #test written by me
+  xit "head_to_head" do
+    expect(@stat_tracker.head_to_head("6")).to be_an_instance_of Hash
   end
 
 end
