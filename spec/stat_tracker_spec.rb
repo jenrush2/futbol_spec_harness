@@ -177,6 +177,8 @@ RSpec.describe StatTracker do
   end
 
   #test written by me
-  it 
+  it "worst_loss" do 
+    expect(@stat_tracker.worst_loss("6")).to eq(5)
+  end
 
 end
