@@ -184,6 +184,27 @@ RSpec.describe StatTracker do
   #test written by me
   xit "head_to_head" do
     expect(@stat_tracker.head_to_head("6")).to be_an_instance_of Hash
+
+    expect(@stat_tracker.head_to_head("6")).to eq({"Houston Dynamo"=>0.3478, "Sporting Kansas City"=>0.4545, "DC United"=>0.2759, "North Carolina Courage"=>0.2821, "Sky Blue FC"=>0.1667, "LA Galaxy"=>0.2692, "Houston Dash"=>0.16, "Orlando City SC"=>0.2, "Seattle Sounders FC"=>0.2222, "New York City FC"=>0.2813, "New York Red Bulls"=>0.3438, "Chicago Fire"=>0.2222, "Vancouver Whitecaps FC"=>0.5, "Los Angeles FC"=>0.3, "Columbus Crew SC"=>0.0, "Real Salt Lake"=>0.6, "Philadelphia Union"=>0.4, "Montreal Impact"=>0.5, "New England Revolution"=>0.4375, "Portland Timbers"=>0.5, "Utah Royals FC"=>0.2308, "Atlanta United"=>0.1667, "Toronto FC"=>0.2, "San Jose Earthquakes"=>0.0, "Orlando Pride"=>0.2667, "Chicago Red Stars"=>0.1, "Washington Spirit FC"=>0.2, "Minnesota United FC"=>0.4, "Portland Thorns FC"=>0.2308, "FC Cincinnati"=>0.4, "Reign FC"=>0.5})
+  end
+
+  #test written by me
+  xit "game_team_type" do
+    game_team_object = @stat_tracker.game_teams[0]
+    expect(@stat_tracker.game_team_type(game_team_object)).to eq("Postseason")
+  end
+
+  #test written by me
+  xit "list_postseason_games" do
+    expect(@stat_tracker.list_postseason_games("6", "20162017")).to be_an_instance_of Array 
+  end
+
+  #test written by me
+  it "seasonal_summary" do
+    expect(@stat_tracker.seasonal_summary("6")).to be_an_instance_of Hash 
+
+    expect(@stat_tracker.seasonal_summary("6")).to eq({"20122013"=>{:regular_season=>{:win_percentage=>0.4792, :total_goals_scored=>103, :total_goals_against=>86, :average_goals_scored=>2.1458, :average_goals_against=>1.7917}, :postseason=>{:win_percentage=>0.6818, :total_goals_scored=>51, :total_goals_against=>37, :average_goals_scored=>2.3182, :average_goals_against=>1.6818}}, "20132014"=>{:regular_season=>{:win_percentage=>0.5976, :total_goals_scored=>198, :total_goals_against=>143, :average_goals_scored=>2.4146, :average_goals_against=>1.7439}, :postseason=>{:win_percentage=>0.4167, :total_goals_scored=>22, :total_goals_against=>20, :average_goals_scored=>1.8333, :average_goals_against=>1.6667}}, "20142015"=>{:regular_season=>{:win_percentage=>0.378, :total_goals_scored=>171, :total_goals_against=>173, :average_goals_scored=>2.0854, :average_goals_against=>2.1098}, :postseason=>"Did not participate in postseason."}, "20152016"=>{:regular_season=>{:win_percentage=>0.4024, :total_goals_scored=>182, :total_goals_against=>178, :average_goals_scored=>2.2195, :average_goals_against=>2.1707}, :postseason=>"Did not participate in postseason."}, "20162017"=>{:regular_season=>{:win_percentage=>0.5, :total_goals_scored=>174, :total_goals_against=>159, :average_goals_scored=>2.122, :average_goals_against=>1.939}, :postseason=>{:win_percentage=>0.6667, :total_goals_scored=>13, :total_goals_against=>11, :average_goals_scored=>2.1667, :average_goals_against=>1.8333}}, "20172018"=>{:regular_season=>{:win_percentage=>0.5244, :total_goals_scored=>207, :total_goals_against=>165, :average_goals_scored=>2.5244, :average_goals_against=>2.0122}, :postseason=>{:win_percentage=>0.5833, :total_goals_scored=>33, :total_goals_against=>25, :average_goals_scored=>2.75, :average_goals_against=>2.0833}}})
+
   end
 
 end
